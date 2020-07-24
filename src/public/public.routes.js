@@ -1,18 +1,16 @@
 (function() {
 'use strict';
 
-angular.module('public')
-.config(routeConfig);
+  angular.module('public')
+         .config(routeConfig);
 
-/**
- * Configures the routes and views
- */
-routeConfig.$inject = ['$stateProvider'];
-function routeConfig ($stateProvider) {
-  // Routes
-  $stateProvider
+  routeConfig.$inject = ['$stateProvider'];
+
+  function routeConfig ($stateProvider) {
+    $stateProvider
+
     .state('public', {
-      abstract: true,
+      absract: true,
       templateUrl: 'src/public/public.html'
     })
     .state('public.home', {
@@ -40,6 +38,24 @@ function routeConfig ($stateProvider) {
           return MenuService.getMenuItems($stateParams.category);
         }]
       }
+    })
+    .state('public.signup', {
+      url: '/signup',
+      templateUrl: 'src/public/signup/signup.html',
+      controller: 'SignupController',
+      controllerAs: 'signupCtrl'
+    })
+    .state('public.myinfo', {
+      url: '/myinfo',
+      templateUrl: 'src/public/my-info/my-info.html',
+      controller: 'MyInfoController',
+      controllerAs: 'myInfoCtrl',
+      resolve: {
+        userInfo: ['MyInfoService', function(MyInfoService) {
+          return MyInfoService.getMyinfo();
+        }]
+      }
     });
-}
+  }
+
 })();

@@ -1,3 +1,44 @@
+/* SIGN UP FORM */
+.signup {
+  margin: 0 20%;
+}
+.signup-searchresults { margin-bottom: 150px;}
+
+/* END SIGN UP */
+
+/* MY INFO */
+.myinfo-me {
+  margin: 0 10%;
+  font-size: 1.6em;
+}
+.myinfo-dish {
+  margin: 0 20% 5% 20%;
+  font-size: 1.2em;
+}
+
+.myinfo dl dt {
+  float:left;
+  font-weight:bold;
+  margin-right:10px;
+  padding: 6px;
+
+}
+.myinfo dt {
+  text-align: right;
+  width: 25%;
+}
+
+.myinfo dd {
+  text-align: left;
+  width: 75%;
+}
+
+.myinfo dl dd {
+  margin: 5px 0;
+  padding: 6px 0;
+}
+/* END MY INFO */
+
 /* HOME PAGE */
 .container .jumbotron {
   box-shadow: 0 0 50px #3F0C1F;
