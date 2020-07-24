@@ -57,7 +57,8 @@
                    name="phoneNumber"
                    ng-model="signupCtrl.userInfo.phoneNumber"
                    placeholder="Phone ###-###-####"
-                   pattern="(\d{3})-(\d{3})-(\d{4})">
+                   pattern="(\d{3})-(\d{3})-(\d{4})"
+                   required>
             <span ng-if="signupForm.phoneNumber.$invalid && signupForm.phoneNumber.$touched">
               <small>Phone must be in the format ###-###-####</small>
             </span>
